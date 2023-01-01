@@ -54,3 +54,20 @@ func WriteFile(path string, content string, args []string) {
 		return
 	}
 }
+
+func GetProjectModuleName() string {
+	f, err := os.Open("go.mod")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer f.Close()
+
+	var moduleName string
+
+	_, err = fmt.Fscanf(f, "module %s", &moduleName)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return moduleName
+}

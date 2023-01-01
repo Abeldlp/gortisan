@@ -11,6 +11,7 @@ func writeRouteBouterplate(name string) string {
 package routes
 
 import (
+	"` + GetProjectModuleName() + `/controllers"
 	"github.com/gin-gonic/gin"
 )
 
