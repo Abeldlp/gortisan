@@ -13,5 +13,5 @@ var MakeCmd = &cobra.Command{
 }
 
 func init() {
-	MakeCmd.AddCommand(makecmd.ControllerCmd, makecmd.ModelCmd)
+	MakeCmd.AddCommand(makecmd.ControllerCmd, makecmd.ModelCmd, makecmd.RouteCmd)
 }
