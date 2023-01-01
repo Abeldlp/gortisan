@@ -11,9 +11,7 @@ var ConfigCmd = &cobra.Command{
 	Long: `
 The config command configures a resource based on the name passed.
 
-Available resources: database, docker
-
-Eg: database
+Available resources: database
 	`,
 	Args: cobra.MinimumNArgs(1),
 }
